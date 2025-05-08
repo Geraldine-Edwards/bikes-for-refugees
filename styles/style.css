@@ -11,6 +11,7 @@
    --orange-dark: #c05326;
    --orange-light: #f7eae4;
    --white: #fff;
+   --space: 1rem;
  }
 
 body {
@@ -66,7 +67,7 @@ p {
 }
 
 .navigation__item {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .navigation__link {
@@ -133,6 +134,30 @@ button.volunteer:hover {
 /* Content */
 
 .content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: var(--space); 
+  align-items: start; 
+}
+
+.main {
+  grid-column: 1; 
+}
+
+.sidebar {
+  grid-column: 2; 
+}
+
+.learn-more {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: var(--space); 
+}
+.learn-more > h2 {
+  grid-column: span 2; /* Ensures the heading spans both columns */
+}
+
+.learn-more > .article {
   display: flex;
   flex-direction: column;
 }
@@ -159,7 +184,7 @@ button.volunteer:hover {
   height: 320px;
   color: var(--white);
   padding-left: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .hero-content {
@@ -206,6 +231,8 @@ button.volunteer:hover {
 
 .article {
   margin-bottom: 1rem;
+  border: 1px solid var(--grey-light);
+  padding: 1rem;
 }
 
 .article__title {
@@ -252,14 +279,25 @@ button.volunteer:hover {
 
 .facebook-link {
   color: var(--orange-dark);
+  text-align: end;
 }
 
 /* Sidebar */
 
-.sidebar {
+aside {
   display: flex;
   flex-direction: column;
   min-width: 350px;
+}
+
+aside > article {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+}
+
+aside > article > img {
+  align-self: center;
+  justify-self: center; 
 }
 
 /* Footer */
