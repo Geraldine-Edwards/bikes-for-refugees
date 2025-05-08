@@ -113,7 +113,7 @@ button {
 header > button:hover {
   background-color: var(--white);
   color: var(--orange-dark);
-  border: 1px solid var(--orange-dark);
+  border: 1px solid var(--grey-light);
 }
 
 button.donate:hover {
